@@ -1,0 +1,559 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: url(bg.png);
+}
+
+header {
+    width: 50%;
+    height: 10vh;
+  }
+
+  nav {
+    width: 100%;
+    height: 100%;
+  }
+  
+  ul {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+    
+  }
+  
+  .Accueil, .Competences, .Projets, .About, .Contact {
+    width: 1920px;
+    height: 1080px;
+    position:absolute;
+    top:0;
+    left:0;
+  }
+  .Accueil {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+
+  }
+  .Competences {
+    display: flex;
+    flex-direction: column;
+    top: 1080px;
+
+  }
+  .Projets {
+    top: 2160px;
+
+  }
+  .About {
+    top: 3240px;
+
+  }
+  .Contact {
+    top: 4320px;
+
+  }
+
+
+  .animation{
+    margin: auto 25vw;
+  }
+
+  #container1{
+    width: 7.6rem;
+  }
+
+  #typed-out{
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing1 4s steps(8, end) forwards infinite, blinking1 4s infinite;
+    font-size: 2.5rem;
+  
+  }
+
+  #container2{
+    width: 17rem;
+  }
+
+  #typed-out2{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing2 4s steps(15, end) forwards infinite, blinking2 4s infinite;
+    font-size: 2.5rem;
+    
+  }
+
+  #container3{
+    width: 18.5rem;
+  }
+
+  #typed-out3{
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    animation: typing3 4s steps(15, end) infinite forwards, blinking3 4s infinite ;
+    
+    font-size: 2.5rem;
+    
+  }
+
+  @keyframes typing1 {
+    0% { visibility: visible; width: 0;}
+    33% { width: 100%;  }
+    100% {visibility: hidden;}
+  }
+
+  @keyframes typing2 {
+    0% { visibility: visible; width: 0 }
+    25% { width: 0 }
+    50%{width: 100% }
+    100% {visibility: hidden;}
+  }
+
+  
+
+  @keyframes typing3 {
+    0% { visibility: visible; width: 0 }
+    50% { width: 0 } 
+    75% { width: 100%}
+    100% {visibility: hidden;}
+  }
+
+
+  @keyframes blinking1 {
+    0% {
+      border-color: transparent;}
+      
+    9% {border-right: .15em solid white;
+      border-color: white; }
+    18% {
+      border-color: transparent;
+    }
+    24% {
+      border-right: .15em solid white;
+      border-color: white;
+    }
+    33% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: transparent;
+  }
+  }
+
+  @keyframes blinking2 {
+    0% {
+      border-color: transparent;}
+      
+    25% {
+      border-color: transparent
+       }
+    31.5% {
+      border-right: .15em solid white;
+      border-color: white;
+    }
+    37.5% {
+      border-color: transparent;
+    }
+    43.75% {
+      border-right: .15em solid white;
+      border-color: white;
+    }
+    50%{
+      border-color: transparent;
+    }
+    100% {
+      border-color: transparent;
+  }
+  }
+
+  @keyframes blinking3 {
+    0% {
+      border-color: transparent;}
+      
+    50% {border-color: transparent;
+    }
+
+    56% {
+      border-right: .15em solid white;
+      border-color: white;
+    }
+    62% {
+      border-color: transparent;
+    }
+    68% {
+      border-right: .15em solid white;
+      border-color: white;
+    }
+    75%{
+      border-color: transparent;
+    }
+    100% {
+      border-color: transparent;
+  }
+  }
+
+  .container1 {
+    margin: 50px auto;
+    width: 500px;
+    position: absolute;
+    right: 10vw;
+    top: 10vh;
+  }
+  
+  .progress1 {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar1 {
+    height: 18px;
+    border-radius: 30px;
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+  }
+  
+  .progress-moved1 .progress-bar1 {
+    width: 75%; 
+    background-color: #EF476F;  
+    animation: progressAnimation1 6s;
+  }
+  
+  @keyframes progressAnimation1 {
+    0%   { width: 5%; background-color: #F9BCCA;}
+    100% { width: 75%; background-color: #EF476F; }
+  }
+
+  .container2 {
+    margin: 50px auto;
+    width: 500px;
+    position: absolute;
+    right: 10vw;
+    top: 26vh;
+  }
+  
+  .progress2 {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar2 {
+    height: 18px;
+    border-radius: 30px;
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+  }
+  
+  .progress-moved2 .progress-bar2 {
+    width: 50%; 
+    background-color: #EF476F;  
+    animation: progressAnimation2 6s;
+  }
+  
+  @keyframes progressAnimation2 {
+    0%   { width: 5%; background-color: #F9BCCA;}
+    100% { width: 50%; background-color: #EF476F; }
+  }
+
+  .container3 {
+    margin: 50px auto;
+    width: 500px;
+    position: absolute;
+    right: 10vw;
+    top: 42vh;
+  }
+  
+  .progress3 {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar3 {
+    height: 18px;
+    border-radius: 30px;
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+  }
+  
+  .progress-moved3 .progress-bar3 {
+    width: 80%; 
+    background-color: #EF476F;  
+    animation: progressAnimation3 6s;
+  }
+  
+  @keyframes progressAnimation3 {
+    0%   { width: 5%; background-color: #F9BCCA;}
+    100% { width: 80%; background-color: #EF476F; }
+  }
+
+  .container4 {
+    margin: 50px auto;
+    width: 500px;
+    position: absolute;
+    right: 10vw;
+    top: 58vh;
+  }
+  
+  .progress4 {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar4 {
+    height: 18px;
+    border-radius: 30px;
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+  }
+  
+  .progress-moved4 .progress-bar4 {
+    width: 90%; 
+    background-color: #EF476F;  
+    animation: progressAnimation4 6s;
+  }
+  
+  @keyframes progressAnimation4 {
+    0%   { width: 5%; background-color: #F9BCCA;}
+    100% { width: 90%; background-color: #EF476F; }
+  }
+  
+  .container5 {
+    margin: 50px auto;
+    width: 500px;
+    position: absolute;
+    right: 10vw;
+    top: 74vh;
+  }
+  
+  .progress5 {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar5 {
+    height: 18px;
+    border-radius: 30px;
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+  }
+  
+  .progress-moved5 .progress-bar5 {
+    width: 90%; 
+    background-color: #EF476F;  
+    animation: progressAnimation5 6s;
+  }
+  
+  @keyframes progressAnimation5 {
+    0%   { width: 5%; background-color: #F9BCCA;}
+    100% { width: 90%; background-color: #EF476F; }
+  }
+
+  .container6 {
+    margin: 50px auto;
+    width: 500px;
+    position: absolute;
+    right: 10vw;
+    top: 90vh;
+  }
+  
+  .progress6 {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar6 {
+    height: 18px;
+    border-radius: 30px;
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+  }
+  
+  .progress-moved6 .progress-bar6 {
+    width: 80%; 
+    background-color: #EF476F;  
+    animation: progressAnimation6 6s;
+  }
+  
+  @keyframes progressAnimation6 {
+    0%   { width: 5%; background-color: #F9BCCA;}
+    100% { width: 80%; background-color: #EF476F; }
+  }
+
+  .img1{
+    position: absolute;
+    top:12vh;
+    right:40%;
+  }
+
+  .img2{
+    position: absolute;
+    top:27vh;
+    right:40%;
+  }
+
+  .img3{
+    position: absolute;
+    top:42vh;
+    right:38%;
+  }
+
+  .img4{
+    position: absolute;
+    top:60vh;
+    right:40%;
+  }
+
+  .img5{
+    position: absolute;
+    top:75vh;
+    right:38%;
+  }
+
+  .img6{
+    position: absolute;
+    top:90vh;
+    right:40%;
+  }
+
+  .txt{
+    position: absolute;
+    left: 5vw;
+    top:15vh;
+    width: 50%;
+    height: 800px;
+    font-size: 120px;
+    font-family:'Mulish', sans-serif;
+  }
+
+  .me{
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    right: 20vh;
+    top: 20vh;
+  }
+
+  .p{
+    position: absolute;
+    top: 20vh;
+    left:10vw;
+    width: 50%;
+    font-family:'Mulish', sans-serif;
+    font-size: 35px;
+  }
+
+  input[type=text], textarea, input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+  }
+  label{margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;}
+  
+  input[type=submit] {
+    background-color: #5d5d5d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #d065fe;
+  }
+  
+  .con {
+    position:absolute;
+    left: 10vw;
+    
+    /* Ajouter box-sizing */
+    box-sizing : border-box;
+    border-radius:5px;
+    background-color:#f2f2f2;
+    padding:20px;
+    width: 100%;
+    /* redéfinition 400 + 2*20 */
+    max-width: 440px;
+    margin:0 auto;
+  }
+  h1  {
+    color: black;
+    width: 100%;
+    font-family: 'Mulish', sans-serif;
+  }
+
+.doc{
+  display: flex;
+  justify-content: space-around;
+  font-size: 50px;
+
+}
+
+.sae{
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.5rem;
+  font-family: "Impact";
+  
+}
+
+.N{
+  font-family: 'Mulish', sans-serif;
+}
