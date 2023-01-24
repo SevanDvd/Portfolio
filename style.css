@@ -2,8 +2,10 @@ body{
     margin: 0;
     padding: 0;
     border: none;
-    background: url(bg.png);
-}
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+} 
 
 header {
     width: 50%;
@@ -26,6 +28,11 @@ header {
     align-items: center;
   }
   
+  li :hover{
+    color: #5d5d5d;
+    cursor: pointer;
+  }
+
   a {
     color: white;
     text-decoration: none;
@@ -41,35 +48,37 @@ header {
   }
   
   .Accueil, .Competences, .Projets, .About, .Contact {
-    width: 1920px;
-    height: 1080px;
-    position:absolute;
-    top:0;
-    left:0;
+    width: 100vw;
+    height: auto;
+    position:relative;
+
+
   }
   .Accueil {
     display: flex;
     flex-direction: column;
-    top: 0;
-
+    background: url(p1.png);
+    background-position-x: center;
+    height: 100vh;
   }
   .Competences {
     display: flex;
-    flex-direction: column;
-    top: 1080px;
+    background-color: #d0c8ee;
+    height: 100vh;
 
   }
   .Projets {
-    top: 2160px;
+    background-color: #b18fcf;
+    height: 100vh;
 
   }
   .About {
-    top: 3240px;
-
+    background-color: #978897;
+    display: flex;
+    height: 100vh;
   }
   .Contact {
-    top: 4320px;
-
+    background-color: #56535c;
   }
 
 
@@ -218,9 +227,8 @@ header {
   }
 
   .container1 {
-    margin: 50px auto;
+    margin: auto;
     width: 500px;
-    position: absolute;
     right: 10vw;
     top: 10vh;
   }
@@ -253,9 +261,8 @@ header {
   }
 
   .container2 {
-    margin: 50px auto;
+    margin: auto;
     width: 500px;
-    position: absolute;
     right: 10vw;
     top: 26vh;
   }
@@ -288,9 +295,9 @@ header {
   }
 
   .container3 {
-    margin: 50px auto;
+    margin: auto;
     width: 500px;
-    position: absolute;
+
     right: 10vw;
     top: 42vh;
   }
@@ -323,9 +330,9 @@ header {
   }
 
   .container4 {
-    margin: 50px auto;
+    margin: auto;
     width: 500px;
-    position: absolute;
+
     right: 10vw;
     top: 58vh;
   }
@@ -358,9 +365,9 @@ header {
   }
   
   .container5 {
-    margin: 50px auto;
+    margin: auto;
     width: 500px;
-    position: absolute;
+
     right: 10vw;
     top: 74vh;
   }
@@ -393,9 +400,8 @@ header {
   }
 
   .container6 {
-    margin: 50px auto;
+    margin: auto;
     width: 500px;
-    position: absolute;
     right: 10vw;
     top: 90vh;
   }
@@ -428,66 +434,71 @@ header {
   }
 
   .img1{
-    position: absolute;
-    top:12vh;
-    right:40%;
+    object-fit: cover; width: 100px; height: 100px;
   }
 
   .img2{
-    position: absolute;
-    top:27vh;
-    right:40%;
+    object-fit: cover; width: 100px; height: 100px;
   }
 
   .img3{
-    position: absolute;
-    top:42vh;
-    right:38%;
+    object-fit: cover; width: auto; height: 100px;
   }
 
   .img4{
-    position: absolute;
-    top:60vh;
-    right:40%;
+    object-fit: cover; width: 100px; height: 100px;
+    
   }
 
   .img5{
-    position: absolute;
-    top:75vh;
-    right:38%;
+    object-fit: cover; width: 175px; height: 100px;
+    
   }
 
   .img6{
-    position: absolute;
-    top:90vh;
-    right:40%;
+    object-fit: cover; width: 100px; height: 100px;
+    
   }
 
+  .element img{
+    display: block;
+    margin: auto;
+  }
+
+
   .txt{
-    position: absolute;
-    left: 5vw;
-    top:15vh;
-    width: 50%;
-    height: 800px;
-    font-size: 120px;
+    left:0;
+    width: 50vw;
+    height: 100vh;
+    font-size: 90px;
     font-family:'Mulish', sans-serif;
+    text-align: center;
+  }
+
+  .about:hover .me{
+    filter: blur(0px);
   }
 
   .me{
-    position: absolute;
-    width: 25%;
-    height: 50%;
-    right: 20vh;
-    top: 20vh;
+    width: 400px;
+    height: auto;
+    filter: blur(4px);
+    transition-duration: 4s;
+    transition-property: filter;
+    margin: auto;
+  }
+
+  
+
+   :hover{
+    filter: blur(0px);
   }
 
   .p{
-    position: absolute;
-    top: 20vh;
-    left:10vw;
-    width: 50%;
+    width: 50vw;
     font-family:'Mulish', sans-serif;
     font-size: 35px;
+    text-align: center;
   }
 
   input[type=text], textarea, input[type=email] {
@@ -520,19 +531,15 @@ header {
   }
   
   .con {
-    position:absolute;
-    left: 10vw;
-    
-    /* Ajouter box-sizing */
+
     box-sizing : border-box;
     border-radius:5px;
     background-color:#f2f2f2;
     padding:20px;
     width: 100%;
-    /* redéfinition 400 + 2*20 */
     max-width: 440px;
-    margin:0 auto;
   }
+
   h1  {
     color: black;
     width: 100%;
@@ -543,7 +550,6 @@ header {
   display: flex;
   justify-content: space-around;
   font-size: 50px;
-
 }
 
 .sae{
@@ -551,9 +557,12 @@ header {
   justify-content: space-around;
   font-size: 2.5rem;
   font-family: "Impact";
-  
 }
 
 .N{
   font-family: 'Mulish', sans-serif;
+}
+
+.oui{
+    display: flex;
 }
